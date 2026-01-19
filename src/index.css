@@ -6,8 +6,17 @@
 
 body {
 	margin: 0;
-	font-family: Outfit, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
-	transition: background-color 0.4s, color 0.4s;
+	font-family:
+		Outfit,
+		ui-sans-serif,
+		system-ui,
+		-apple-system,
+		"Segoe UI",
+		Roboto,
+		Arial;
+	transition:
+		background-color 0.4s,
+		color 0.4s;
 	background-color: var(--color-bg);
 	color: var(--color-text);
 }
@@ -21,7 +30,7 @@ body {
 }
 
 @theme {
-	--font-landing:  sans-serif;
+	--font-landing: sans-serif;
 
 	--text-h1: 48px;
 	--text-h2: 30px;
@@ -39,38 +48,38 @@ body {
 	--spacing-3xl: 90px;
 
 	/* Light */
-	--color-background: #f5f2ec;        
-	--color-background-soft: #e8e2d6;   
-	--color-background-dark: #d7c9b5;  
+	--color-background: #f6f8fa;
+	--color-background-soft: #e7ebef;
+	--color-background-dark: #d8dee5;
 
-	--color-text: #33373f;              
-	--color-text-muted: #6c727c;        
+	--color-text: #2a2f36;
+	--color-text-muted: #7a828f;
 	--color-text-contrast: #ffffff;
 
-	--color-accent: #455763;           
-	--color-accent-hover: #001d3d;      
-	--color-secondary: #eea736;          
+	--color-accent: #4a80f0;
+	--color-accent-hover: #2b60d9;
+	--color-secondary: #56c2a3;
 
-	--color-border: #d5cec2;
+	--color-border: #ced3db;
 	--color-card: #ffffff;
 	--color-shadow: rgba(0, 0, 0, 0.05);
 }
 
 .dark {
-	--color-background: #151b22;        
-	--color-background-soft: #1f272f;   
-	--color-background-dark: #0e1318;   
+	--color-background: #101317;
+	--color-background-soft: #15191e;
+	--color-background-dark: #1c2127;
 
-	--color-text: #e5e7eb;              
-	--color-text-muted: #9ca3af;        
-	--color-text-contrast: #ffffff;
+	--color-text: #e5e9f2;
+	--color-text-muted: #8d93a2;
+	--color-text-contrast: #000000;
 
-	--color-accent: #b0c4cf;            
-	--color-accent-hover: #c4d4df;      
-	--color-secondary: #eea736;         
+	--color-accent: #74a6ff;
+	--color-accent-hover: #5a8be8;
+	--color-secondary: #a3c8ff;
 
-	--color-border: #313843;
-	--color-card: #1f272f;
+	--color-border: #2a2f36;
+	--color-card: #161a1f;
 	--color-shadow: rgba(0, 0, 0, 0.45);
 }
 
@@ -115,5 +124,7 @@ h6 {
 }
 
 a {
-	transition: text-shadow 0.3s ease, color 0.3s ease;
+	transition:
+		text-shadow 0.3s ease,
+		color 0.3s ease;
 }
