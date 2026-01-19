@@ -1,7 +1,13 @@
 import { TripCard } from "./TripCard";
 import { getDaysLeft } from "../helpers/dateUtils";
+import type { Trip } from "../types/countdown.types";
 
-export const TripList = ({ trips, onRemoveTrip }) => {
+type TripList = {
+	trips: Trip[];
+	onRemoveTrip: (id: number) => void;
+}
+
+export const TripList = ({ trips, onRemoveTrip }: TripList) => {
 	if (trips.length === 0) {
 		return <p className="text-sm text-text italic">Aún no has añadido ningún viaje.</p>;
 	}

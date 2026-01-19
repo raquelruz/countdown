@@ -1,10 +1,15 @@
 import { useEffect, useState } from "react";
 import { FiSun, FiMoon } from "react-icons/fi";
 
+type Theme = "light" | "dark";
+
+const getInitialTheme = (): Theme => {
+	const stored = localStorage.getItem("theme");
+	return stored === "dark" ? "dark" : "light";
+};
+
 export const ThemeToggle = () => {
-	const [theme, setTheme] = useState(
-		() => localStorage.getItem("theme") || "light"
-	);
+	const [theme, setTheme] = useState<Theme>(getInitialTheme);
 
 	useEffect(() => {
 		document.documentElement.classList.toggle("dark", theme === "dark");

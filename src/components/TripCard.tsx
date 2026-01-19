@@ -1,4 +1,12 @@
-export const TripCard = ({ trip, daysLeft, onRemove }) => {
+import type { Trip } from "../types/countdown.types";
+
+interface TripCardProps {
+	trip: Trip;
+	daysLeft: number,
+	onRemove: () => void;
+}
+
+export const TripCard = ({ trip, daysLeft, onRemove }: TripCardProps) => {
 	const isPast = daysLeft < 0;
 	const isToday = daysLeft === 0;
 

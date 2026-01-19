@@ -1,8 +1,12 @@
 import { useState } from "react";
 
-export const TripForm = ({ onAddTrip }) => {
-	const [name, setName] = useState("");
-	const [date, setDate] = useState("");
+type TripFormProps = {
+	onAddTrip: (name: string, date: string) => void;
+}
+
+export const TripForm = ({ onAddTrip }: TripFormProps) => {
+	const [name, setName] = useState<string>("");
+	const [date, setDate] = useState<string>("");
 
 	const handleSubmit = (event) => {
 		event.preventDefault();

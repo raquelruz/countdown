@@ -3,9 +3,10 @@ import "./App.css";
 import { TripForm } from "./components/TripForm";
 import { TripList } from "./components/TripList";
 import { ThemeToggle } from "./components/ThemeToggle";
+import type { Trip } from "./types/countdown.types";
 
 export const App = () => {
-	const [trips, setTrips] = useState([
+	const [trips, setTrips] = useState<Trip[]>([
 		{
 			id: 1,
 			name: "Viaje a Viena",
@@ -13,8 +14,8 @@ export const App = () => {
 		},
 	]);
 
-	const handleAddTrip = (name, date) => {
-		const newTrip = {
+	const handleAddTrip = (name: string, date: string) => {
+		const newTrip: Trip = {
 			id: Date.now(),
 			name,
 			date,
@@ -23,7 +24,7 @@ export const App = () => {
 		setTrips((prevTrips) => [...prevTrips, newTrip]);
 	};
 
-	const handleRemoveTrip = (id) => {
+	const handleRemoveTrip = (id: number) => {
 		setTrips((prevTrips) => prevTrips.filter((trip) => trip.id !== id));
 	};
 
